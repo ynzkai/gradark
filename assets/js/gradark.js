@@ -18,10 +18,15 @@ $(document).ready(function () {
 	}
 	$img.css({"width": img_width, "height": img_height, "left": img_left, "top": img_top});
   }
-  resize_background_img();
-  resize_background_img(); // call this function 2 times explicitly
+
+  function reloacate_img() {
+    resize_background_img();
+    resize_background_img(); // call this function 2 times explicitly
+  }
+
+  reloacate_img();
   $(window).resize(function(){
-	resize_background_img();
+	reloacate_img();
   });
 
   // divide words
@@ -44,4 +49,13 @@ $(document).ready(function () {
 	}
 
   });
+
+
+  // scroll
+  $("#links .home").click(function() { $(document).scrollTo("#home", 1000); });
+  $("#links .about").click(function() { $(document).scrollTo("#about", 1000); });
+  $("#links .servies").click(function() { $(document).scrollTo("#servies", 1000); });
+  $("#links .portfolio").click(function() { $(document).scrollTo("#portfolio", 1000); });
+  $("#links .blog").click(function() { $(document).scrollTo("#blog", 1000); });
+  $("#links .contact").click(function() { $(document).scrollTo("#contact", 1000); });
 });
