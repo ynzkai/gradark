@@ -76,7 +76,7 @@ body {
 	top: 0;
 	left: 0;
 	background-color: #000;
-	opacity: .75;
+	opacity: .8;
 }
 
 #home #background #wraper {
@@ -95,6 +95,14 @@ body {
 #home header {
 	padding: 15px 40px;
 	border-bottom: 1px solid #333;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
 }
 
 #home header:after {
@@ -109,11 +117,11 @@ body {
 }
 #home header #navbar {
 	float: right;
-	transition: all 1s;
-	-moz-transition: all 1s;
-	-webkit-transition: all 1s;
-	-ms-transition: all 1s;
-	-o-transition: all 1s;
+	transition: right 1s;
+	-moz-transition: right 1s;
+	-webkit-transition: right 1s;
+	-ms-transition: right 1s;
+	-o-transition: right 1s;
 }
 #home header #navbar a {
 	padding: 0 10px;
@@ -134,11 +142,11 @@ body {
 	float: right;
 	width: 2em;
 	height: 1em;
-	transition: all 1s;
-	-moz-transition: all 1s;
-	-webkit-transition: all 1s;
-	-ms-transition: all 1s;
-	-o-transition: all 1s;
+	transition: left 1s;
+	-moz-transition: left 1s;
+	-webkit-transition: left 1s;
+	-ms-transition: left 1s;
+	-o-transition: left 1s;
 }
 #home header #navbar #button:hover {
 	cursor: pointer;
@@ -178,11 +186,11 @@ body {
 
 #home header #navbar.expand_menu {
 	right: 0 !important;
-	transition: all .5s;
-	-moz-transition: all .5s;
-	-webkit-transition: all .5s;
-	-ms-transition: all .5s;
-	-o-transition: all .5s;
+	transition: right .5s;
+	-moz-transition: right .5s;
+	-webkit-transition: right .5s;
+	-ms-transition: right .5s;
+	-o-transition: right .5s;
 }
 #home header #navbar.expand_menu #button {
 	left: 0 !important;
@@ -215,7 +223,7 @@ body {
 	height: 250px;
 	margin: -150px -200px;
 	text-align: center;
-	background-color: rgba(255,255,255,.2);
+	background-color: rgba(255,255,255,.3);
 }
 
 #home #center-panel #title {
@@ -294,7 +302,7 @@ body {
 }
 #home #down-button i {
 	position: relative;
-	animation: arrow 3s ease 1s infinite;
+	animation: arrow 2s ease 0s infinite alternate;
 }
 #home #down-button:hover {
 	cursor: pointer;
@@ -307,7 +315,7 @@ body {
 }
 @keyframes arrow {
 	0% {
-		opacity: .3;
+		opacity: 0;
 		top: -.5em;
 	}
 	100% {
@@ -342,6 +350,16 @@ body {
 	#home header {
 		padding: 15px 20px;
 	}
+	#home header #navbar {
+		position: fixed;
+		float: none;
+		height: 100%;
+		width: 150px;
+		top: 0;
+		right: -190px;
+		padding: 15px 20px;
+		background-color: #000;
+	}
 	#home header #navbar #links {
 		position: absolute;
 		padding-top: 3em;
@@ -356,18 +374,6 @@ body {
 		display: block;
 		float: left;
 		left: -66px; /* 20 + 20 + 2em(body font size 13px * 2) */
-	}
-	#home header #navbar {
-		position: absolute;
-		float: none;
-		height: 100%;
-		width: 150px;
-		top: 0;
-		right: -190px;
-		padding: 15px 20px;
-		background-color: #000;
-		opacity: .8;
-		z-index: 999;
 	}
 }
 

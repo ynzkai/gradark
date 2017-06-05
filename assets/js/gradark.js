@@ -38,14 +38,13 @@ $(document).ready(function () {
 	$("#home #slide-text").resume_animate();
   });
 
-  // navbar
+  // navbar button
   $("#home header #navbar #button").click(function (){
 	var $navbar = $("#home header #navbar");
-	var $navbtn = $("#home header #navbar #button");
 	if($navbar.hasClass("expand_menu")) {
-		$navbar.removeClass("expand_menu");
+	  $navbar.removeClass("expand_menu");
 	} else {
-		$navbar.addClass("expand_menu");
+	  $navbar.addClass("expand_menu");
 	}
 
   });
@@ -58,4 +57,16 @@ $(document).ready(function () {
   $("#links .portfolio").click(function() { $(document).scrollTo("#portfolio", 1000); });
   $("#links .blog").click(function() { $(document).scrollTo("#blog", 1000); });
   $("#links .contact").click(function() { $(document).scrollTo("#contact", 1000); });
+
+  // waypoints
+  var waypoints = $("#about").waypoint({
+	offset: 50, 
+    handler: function(direction) {
+	  if(direction == "down") {
+	    $("#home header").css("background-color", "rgba(0,0,0,.8)");
+	  } else {
+	    $("#home header").css("background-color", "transparent");
+	  }
+    }
+  });
 });
