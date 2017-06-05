@@ -52,7 +52,7 @@ body {
 }
 
 #home, #home a {
-	color: #e7e7e7;
+	color: #ccc;
 }
 
 /* background */
@@ -94,7 +94,7 @@ body {
 /* header */
 #home header {
 	padding: 15px 40px;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #222;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -103,6 +103,10 @@ body {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
+}
+
+#home header.fixed {
+	background-color: rgba(0,0,0,1);
 }
 
 #home header:after {
@@ -125,15 +129,15 @@ body {
 }
 #home header #navbar a {
 	padding: 0 10px;
-	transition: color .5s;
-	-moz-transition: color .5s; /* Firefox 4 */
-	-webkit-transition: color .5s; /* Safari 和 Chrome */
-	-ms-transition: color .5s; /* Opera */
-	-o-transition: color .5s; /* Opera */
+	transition: color .3s;
+	-moz-transition: color .3s; /* Firefox 4 */
+	-webkit-transition: color .3s; /* Safari 和 Chrome */
+	-ms-transition: color .3s; /* Opera */
+	-o-transition: color .3s; /* Opera */
 }
 #home header #navbar a:hover {
 	color: #999;
-	text-shadow: 0 0 1px #999;
+	text-shadow: 0 0 0 1px #c0c0c0;
 }
 
 #home header #navbar #button {
@@ -224,6 +228,7 @@ body {
 	margin: -150px -200px;
 	text-align: center;
 	background-color: rgba(255,255,255,.3);
+	color: #fff;
 }
 
 #home #center-panel #title {
@@ -273,7 +278,7 @@ body {
 #home #center-panel #sns-buttons a {
 	font-size: 1.5em;
 	padding: 0 10px;
-	color: #8b8b8b;
+	color: #999;
 	transition: color .5s;
 	-moz-transition: color .5s; /* Firefox 4 */
 	-webkit-transition: color .5s; /* Safari 和 Chrome */
@@ -282,23 +287,22 @@ body {
 }
 #home #center-panel #sns-buttons a:hover {
 	color: #fff;
-	text-shadow: 0 0 3px #fff;
 }
 
 #home #down-button {
 	position: absolute;
-	width: 2em;
-	height: 2em;
-	line-height: 2em;
+	width: 2.5em;
+	height: 2.5em;
+	line-height: 2.5em;
 	text-align: center;
 	font-size: 1em;
 	color: #fff;
-	opacity: .3;
-	bottom: 3em;
+	opacity: .5;
+	bottom: 4em;
 	left: 50%;
 	margin-left: -.75em;
 	border-radius: 999px;
-	border: 1px solid rgba(255,255,255,.5);
+	border: 1px solid rgba(255,255,255,.3);
 }
 #home #down-button i {
 	position: relative;
@@ -307,8 +311,8 @@ body {
 #home #down-button:hover {
 	cursor: pointer;
 	color: #222;
-	background: #fff;
-	box-shadow: 0 0 30px 0 #fff;
+	background-color: rgba(255,255,255,.5);
+	box-shadow: 0 0 50px 0 #ccc;
 }
 #home #down-button:hover i {
 	animation: none;
@@ -344,6 +348,7 @@ body {
 	.main-container {
 		padding: 0 20px;
 	}
+	/* home style */
 	#home {
 		margin: 0 -20px;
 	}
@@ -358,11 +363,12 @@ body {
 		top: 0;
 		right: -190px;
 		padding: 15px 20px;
-		background-color: #000;
+		background-color: rgba(0,0,0,.9);
 	}
 	#home header #navbar #links {
+		font-size: 1.2em;
 		position: absolute;
-		padding-top: 3em;
+		padding-top: 3.6em;
 	}
 	#home header #navbar #links a {
 		display: block;
@@ -375,6 +381,7 @@ body {
 		float: left;
 		left: -66px; /* 20 + 20 + 2em(body font size 13px * 2) */
 	}
+	/* end home style */
 }
 
 @media (max-width: 480px) {

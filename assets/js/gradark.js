@@ -53,6 +53,7 @@ $(document).ready(function () {
   // scroll
   $("#links .home").click(function() { $(document).scrollTo("#home", 1000); });
   $("#links .about").click(function() { $(document).scrollTo("#about", 1000); });
+  $("#home #down-button").click(function() { $(document).scrollTo("#about", 1000); });
   $("#links .servies").click(function() { $(document).scrollTo("#servies", 1000); });
   $("#links .portfolio").click(function() { $(document).scrollTo("#portfolio", 1000); });
   $("#links .blog").click(function() { $(document).scrollTo("#blog", 1000); });
@@ -63,9 +64,9 @@ $(document).ready(function () {
 	offset: 50, 
     handler: function(direction) {
 	  if(direction == "down") {
-	    $("#home header").css("background-color", "rgba(0,0,0,.8)");
+	    $("#home header").addClass("fixed");
 	  } else {
-	    $("#home header").css("background-color", "transparent");
+	    $("#home header").removeClass("fixed");
 	  }
     }
   });
