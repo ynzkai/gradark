@@ -54,12 +54,12 @@ $(document).ready(function () {
   $("#links .home").click(function() { $(document).scrollTo("#home", 1000); });
   $("#links .about").click(function() { $(document).scrollTo("#about", 1000); });
   $("#home #down-button").click(function() { $(document).scrollTo("#about", 1000); });
-  $("#links .servies").click(function() { $(document).scrollTo("#servies", 1000); });
+  $("#links .services").click(function() { $(document).scrollTo("#services", 1000); });
   $("#links .portfolio").click(function() { $(document).scrollTo("#portfolio", 1000); });
   $("#links .blog").click(function() { $(document).scrollTo("#blog", 1000); });
   $("#links .contact").click(function() { $(document).scrollTo("#contact", 1000); });
 
-  // waypoints
+  // waypoints navbar
   var waypoints = $("#about").waypoint({
 	offset: 50, 
     handler: function(direction) {
@@ -69,5 +69,32 @@ $(document).ready(function () {
 	    $("#home header").removeClass("fixed");
 	  }
     }
+  });
+  // waypoints skills
+  var waypoints = $("#about #skills").waypoint({
+	offset: "90%", 
+    handler: function(direction) {
+	  if(direction == "down") {
+        var $bars = $("#about #skills .skill .front-bar");
+        var $circles = $("#about #skills .skill .front-bar .circle");
+        $bars.css("width", 0);
+        $circles.css("display", "none");
+	    $bars.each(function(){
+	      var width = parseInt($(this).find(".percent").data("percent"));
+	      $(this).animate({"width": width+"%"}, 1000, function() {
+	        $circles.fadeIn("fast");
+	      });
+	    });
+	  }
+    }
+  });
+
+  // skill percents
+  $("#about #skills .skill .percent").each(function (){
+	$(this).text($(this).data("percent"));
+  });
+  $("#about #skills .skill .front-bar").each(function (){
+	var width = parseInt($(this).find(".percent").data("percent"));
+	$(this).css("width", width+"%");
   });
 });

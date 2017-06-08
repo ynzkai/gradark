@@ -14,6 +14,7 @@
   <!-- styles -->
   <link href="lib/css/normalize.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="lib/css/animate.min.css" rel="stylesheet" />
   <link href="lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <!-- script -->
   <script type="text/javascript" src="lib/js/jquery-3.1.1.min.js"></script>
@@ -38,7 +39,7 @@
           <div id="links">
             <a class="home" href="#">Home</a>
             <a class="about" href="#">About</a>
-            <a class="servies" href="#">Servies</a>
+            <a class="services" href="#">Servies</a>
             <a class="portfolio" href="#">Portfolio</a>
             <a class="blog" href="#">Blog</a>
             <a class="contact" href="#">Contact</a>
@@ -87,13 +88,60 @@
           <div id="info">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </div>
-          <ul id="skills">
-            <li>WEB DESIGN</li>
-            <li>WEB DEVELOPMENT</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-          </ul>
+          <div class="container">
+            <ul id="skills" class="row">
+              <li class="skill col-2-1">
+                <div class="skill-title">WEB DESIGN</div>
+                <div class="back-bar">
+                  <div class="front-bar">
+                    <div class="circle">
+                      <div class="percent" data-percent="90%"></div>
+                    </div>
+                  <div>
+                </div>
+              </li>
+              <li class="skill col-2-1">
+                <div class="skill-title">WEB DEVELOPMENT</div>
+                <div class="back-bar">
+                  <div class="front-bar">
+                    <div class="circle">
+                      <div class="percent" data-percent="88%"></div>
+                    </div>
+                  <div>
+                </div>
+              </li>
+              <li class="skill col-2-1">
+                <div class="skill-title">HTML5</div>
+                <div class="back-bar">
+                  <div class="front-bar">
+                    <div class="circle">
+                      <div class="percent" data-percent="85%"></div>
+                    </div>
+                  <div>
+                </div>
+              </li>
+              <li class="skill col-2-1">
+                <div class="skill-title">CSS3</div>
+                <div class="back-bar">
+                  <div class="front-bar">
+                    <div class="circle">
+                      <div class="percent" data-percent="90%"></div>
+                    </div>
+                  <div>
+                </div>
+              </li>
+              <li class="skill col-2-1">
+                <div class="skill-title">JavaScript</div>
+                <div class="back-bar">
+                  <div class="front-bar">
+                    <div class="circle">
+                      <div class="percent" data-percent="85%"></div>
+                    </div>
+                  <div>
+                </div>
+              </li>
+            </ul>
+          </div>
           <div id="CVdownload">
             <div id="download-button">Download CV</div>  
           </div>  
@@ -102,7 +150,15 @@
 
     </section>
 
-    <section id="servies">
+    <section id="services" class="full-width">
+      <div class="section-head">
+        <div class="title">
+          <span class="under-line">SERVICES</span>
+        </div>
+        <div class="description">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+        </div>
+      </div>
     </section>
 
     <section id="portfolio">
