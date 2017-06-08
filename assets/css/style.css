@@ -25,13 +25,16 @@ body {
 
 .main-container {
 	height: 100%;
-	padding: 0 40px;
+	padding: 0 20px;
 }
 .full-width {
-	margin: 0 -40px;
+	margin: 0 -20px;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
 }
-.main-container > section {
-	padding: 5em 0;
+.main-container > section + section {
+	padding-top: 5em !important;
+	padding-bottom: 5em !important;
 }
 
 .under-line {
@@ -79,7 +82,7 @@ body {
 #home {
 	position: relative;
 	height: 100%;
-	margin: 0 -40px;
+	margin: 0 -20px; /* main-container */
 	overflow: hidden;
 }
 
@@ -161,12 +164,14 @@ body {
 	-o-transition: right 1s;
 }
 #home header #navbar a {
-	padding: 0 10px;
 	transition: color .3s;
 	-moz-transition: color .3s; /* Firefox 4 */
 	-webkit-transition: color .3s; /* Safari 和 Chrome */
 	-ms-transition: color .3s; /* Opera */
 	-o-transition: color .3s; /* Opera */
+}
+#home header #navbar a~a {
+	padding-left: 10px;
 }
 #home header #navbar a:hover {
 	color: #999;
@@ -499,12 +504,6 @@ body {
 /* media query */
 
 @media (max-width: 768px) {
-	.main-container {
-		padding: 0 20px;
-	}
-	.full-width {
-		margin: 0 -20px;
-	}
 	/* home style */
 	#home {
 		margin: 0 -20px;
@@ -523,7 +522,6 @@ body {
 		background-color: rgba(0,0,0,.9);
 	}
 	#home header #navbar #links {
-		color: red;
 		position: absolute;
 		padding-top: 3.6em;
 	}
@@ -541,6 +539,12 @@ body {
 	/* end home style */
 
 	/* layout grid */
+	.main-container {
+		padding: 0;
+	}
+	.row {
+		padding: 0 -40px !important;
+	}
 	.sm-col-1 {
 		width: 100%;
 	}
