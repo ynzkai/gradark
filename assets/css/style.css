@@ -219,10 +219,10 @@ body {
 	top: 0;
 }
 #home header #navbar #button #bar:before {
-	top: 6px;
+	top: 9px;
 }
 #home header #navbar #button #bar:after {
-	top: 12px;
+	top: 17px;
 }
 
 #home header #navbar.expand_menu {
@@ -503,6 +503,9 @@ body {
 /* media query */
 
 @media (max-width: 768px) {
+	body {
+		font-size: 18px; 
+	}
 	/* home style */
 	#home {
 		margin: 0; /* main-container */
@@ -533,7 +536,7 @@ body {
 	#home header #navbar #button {
 		display: block;
 		float: left;
-		left: -66px; /* 20 + 20 + 2em(body font size 13px * 2) */
+		left: -76px; /* 20 + 20 + 2em(body font size 13px * 2) */
 	}
 	/* end home style */
 
