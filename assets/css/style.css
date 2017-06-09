@@ -82,7 +82,6 @@ body {
 #home {
 	position: relative;
 	height: 100%;
-	margin: 0 -20px; /* main-container */
 	overflow: hidden;
 }
 
@@ -506,7 +505,7 @@ body {
 @media (max-width: 768px) {
 	/* home style */
 	#home {
-		margin: 0 -20px;
+		margin: 0; /* main-container */
 	}
 	#home header {
 		padding: 15px 20px;
@@ -541,6 +540,11 @@ body {
 	/* layout grid */
 	.main-container {
 		padding: 0;
+	}
+	.full-width {
+		margin: 0;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
 	}
 	.row {
 		padding: 0 -40px !important;
