@@ -81,7 +81,7 @@ $(document).ready(function () {
         $circles.css("display", "none");
 	    $bars.each(function(){
 	      var width = parseInt($(this).find(".percent").data("percent"));
-	      $(this).animate({"width": width+"%"}, 1000, function() {
+	      $(this).animate({"width": width+"%"}, 1000, "swing", function() {
 	        $circles.fadeIn("fast");
 	      });
 	    });

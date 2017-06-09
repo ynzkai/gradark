@@ -59,6 +59,7 @@ body {
 	font-size: 1.5em;
 	font-weight: bold;
 	margin-bottom: 2em;
+	letter-spacing: 0.1em;
 }
 .section-head .title .under-line:after {
 	content: "";
@@ -455,7 +456,7 @@ body {
 #about #CVdownload {
 	padding: .5em 1.5em;
 	border: 1px solid #222;
-	width: 100px;
+	width: 7em;
 	text-align: center;
 	transition: all .5s;
 	-moz-transition: all .5s;
@@ -488,6 +489,7 @@ body {
 	position: relative;
 	top: 0;
 	border: 1px solid #222;
+	margin: 10px auto;
 	padding: 20px 10px;
 	text-align: center;
 	transition: all .5s;
@@ -495,7 +497,6 @@ body {
 	-webkit-transition: all .5s;
 	-ms-transition: all .5s;
 	-o-transition: all .5s;
-	margin: 10px auto;
 }
 #services #items .wraper .icon {
 	width: 2em;
@@ -509,21 +510,21 @@ body {
 	-moz-border-radius: 999px;
 	-ms-border-radius: 999px;
 	-o-border-radius: 999px;
-	transition: all 1s;
-	-moz-transition: all 1s;
-	-webkit-transition: all 1s;
-	-ms-transition: all 1s;
-	-o-transition: all 1s;
+	transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
 }
 #services #items .wraper .title {
 	font-size: 1.2em;
 	font-weight: bold;
 	margin: 1.5em auto;
-	transition: all 1s;
-	-moz-transition: all 1s;
-	-webkit-transition: all 1s;
-	-ms-transition: all 1s;
-	-o-transition: all 1s;
+	transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
 }
 #services #items .wraper .description {
 	line-height: 1.5em;
@@ -537,17 +538,82 @@ body {
 }
 #services #items .wraper .readmore a {
 	color: #222;
+	transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+}
+#services #items .wraper .readmore a:hover {
+	color: #999;
+	text-decoration: underline;
 }
 #services #items .wraper:hover {
 	top: -1em;
-	border-bottom: 1em solid #222;
+	box-shadow: 0 0 0 1em #222;
 }
 #services #items .wraper:hover .icon {
+	box-shadow: 0 0 0 .2em #222;
 }
 #services #items .wraper:hover .title {
+	letter-spacing: .1em;
 }
 
 /* end services style */
+
+/* reviews style */
+#reviews {
+	background-color: #222;
+	color: #777;
+}
+#reviews .title {
+	font-family: 'Open Sans', sans-serif;
+}
+#reviews .reviews {
+	margin-top: 5em;
+}
+#reviews .reviews .review {
+	margin: 1em auto;
+}
+#reviews .reviews .review .avatar {
+	border-radius: 999px;
+	-webkit-border-radius: 999px;
+	-moz-border-radius: 999px;
+	-ms-border-radius: 999px;
+	-o-border-radius: 999px;
+	overflow: hidden;
+	max-width: 150px;
+	background-color: #555;
+}
+#reviews .reviews .review .avatar figure {
+	margin: 0;
+	height: 0;
+	padding-bottom: 100%;
+}
+#reviews .reviews .review .avatar-wraper {
+	position: relative;
+}
+#reviews .reviews .review .avatar-wraper:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 40px;
+	right: -20px;
+	top: 50%;
+	border-bottom: 1px solid #555;
+}
+#reviews .reviews .review .message {
+	background-color: #333;
+	border: 1px solid #555;
+	padding: .5em;
+	line-height: 1.3;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+/* end reviews style */
 
 
 
@@ -570,32 +636,21 @@ body {
 .col-2-1,
 .col-3-1,
 .col-3-2,
-.col-4-1 {
+.col-4-1,
+.col-4-2,
+.col-4-3 {
 	padding: 0 20px;
 	float: left;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
 }
-.col-2-1 {
-	width: 50%;
-}
-.col-3-1 {
-	width: 33.33%;
-}
-.col-3-2 {
-	width: 66.66%;
-}
-.col-4-1 {
-	width: 25%;
-}
-.col-4-2 {
-	width: 50%;
-}
-.col-4-3 {
-	width: 75%;
-}
-
+.col-2-1 { width: 50%; }
+.col-3-1 { width: 33.33%; }
+.col-3-2 { width: 66.66%; }
+.col-4-1 { width: 25%; }
+.col-4-2 { width: 50%; }
+.col-4-3 { width: 75%; }
 
 
 /* media query */
