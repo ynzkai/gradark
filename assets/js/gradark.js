@@ -1,10 +1,9 @@
 $(document).ready(function () {
-
-  // resize img
-  function resize_background_img() {
-	var $img = $("#home #background img");
-	var width = $(window).width();
-	var height = $(window).height();
+  // resize image
+  function resize_img(selector, container) {
+	var $img = $(selector);
+	var width = $(container).width();
+	var height = $(container).height();
 	var img_width = $img.width();
 	var img_height = $img.height();
 	var img_left = (width-img_width)/2 + "px";
@@ -19,15 +18,28 @@ $(document).ready(function () {
 	$img.css({"width": img_width, "height": img_height, "left": img_left, "top": img_top});
   }
 
-  function reloacate_img() {
-    resize_background_img();
-    resize_background_img(); // call this function 2 times explicitly
+  // resize background img
+  function reloacate_background_img(selector, container) {
+    resize_img(selector, container);
+    resize_img(selector, container); // call this function 2 times explicitly
   }
 
-  reloacate_img();
+  reloacate_background_img("#home #background img", window);
   $(window).resize(function(){
-	reloacate_img();
+    reloacate_background_img("#home #background img", window);
   });
+
+  // adjust portfolio image size
+  function resize_portfolio_item_img(selector, container) {
+    resize_img(selector, container);
+    resize_img(selector, container); // call this function 2 times explicitly
+  }
+
+  resize_portfolio_item_img("#portfolio .items .item figure img", "#portfolio .items .item");
+  $(window).resize(function(){
+	resize_portfolio_item_img("#portfolio .items .item figure img", "#portfolio .items .item");
+  });
+
 
   // divide words
   $("#home #slide-text").divide_word({strs: ["Web developer", "Web designer", "Mobile developer"], style: "boom"});
