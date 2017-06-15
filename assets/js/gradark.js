@@ -109,4 +109,9 @@ $(document).ready(function () {
 	var width = parseInt($(this).find(".percent").data("percent"));
 	$(this).css("width", width+"%");
   });
+
+  // gallery
+  $("#portfolio .items figure").click(function (){
+    openPhotoSwipe($(this).data("index"));
+  });
 });
