@@ -131,7 +131,7 @@ body {
 /* header */
 #home header {
 	opacity: .9;
-	padding: 15px 40px;
+	padding: 25px 40px;
 	border-bottom: 1px solid #222;
 	position: fixed;
 	width: 100%;
@@ -141,10 +141,16 @@ body {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
+	transition: all .3s;
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
 }
 
 #home header.fixed {
 	background-color: rgba(0,0,0,1);
+	padding: 15px 40px;
 }
 
 #home header:after {
