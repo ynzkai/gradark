@@ -33,7 +33,7 @@
 	$line = $lines.shift();
 	var speed = options.speed;
     for(var j=0; j<$line.length; j++) {
-      $line[j].animate({"left": lpos, "opacity": 0}, speed+=20);
+      $line[j].animate({"left": lpos, "opacity": 0}, speed+=30);
       $line[j].animate({"left": rpos}, 0);
     }
 	$lines.push($line);
@@ -43,7 +43,7 @@
 	$line = $lines.shift();
 	var speed = options.speed;
     for(var j=0; j<$line.length; j++) {
-      $line[j].animate({"top": (Math.random()-0.5)*1000,"left": (Math.random()-0.5)*1000, "opacity": 0}, speed+=20);
+      $line[j].animate({"top": (Math.random()-0.5)*600,"left": (Math.random()-0.5)*600, "opacity": 0}, speed+=30);
       $line[j].animate({"top": 0, "left": rpos}, 0);
     }
 	$lines.push($line);
@@ -67,7 +67,7 @@
 		pos = (i==0) ? 0 : rpos;
 		opc = (i==0) ? 1 : 0;
 		var letters = options.strs[i].split('');
-		var $wraper = $('<p style="position:absolute; z-index:99; left:0; top:0; width:100%; height:100%;"></p>');
+		var $wraper = $('<p style="position:absolute; z-index:-1; left:0; top:0; width:100%; height:100%;"></p>');
 		var $line = [];
 		for(var j in letters) {
 			var $span = $('<span class="'+options.spanclass+'" style="opacity:'+opc+'; position:relative; left:'+pos+';">'+letters[j]+'</span>');

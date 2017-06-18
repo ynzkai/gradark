@@ -72,8 +72,8 @@ $(document).ready(function () {
   $("#links .contact").click(function() { $(document).scrollTo("#contact", 1000); });
 
   // waypoints navbar
-  var waypoints = $("#about").waypoint({
-	offset: 50, 
+  var waypoints = $("#home").waypoint({
+	offset: -100, 
     handler: function(direction) {
 	  if(direction == "down") {
 	    $("#home header").addClass("fixed");
