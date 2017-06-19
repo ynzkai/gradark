@@ -43,12 +43,14 @@ $(document).ready(function () {
 
   // divide words
   $("#home #slide-text").divide_word({strs: ["Web developer", "Web designer", "Mobile developer"], style: "boom"});
+  /*
   $("#home #center-panel").mouseenter(function (){
 	$("#home #slide-text").stop_animate();
   });
   $("#home #center-panel").mouseleave(function (){
 	$("#home #slide-text").resume_animate();
   });
+  */
 
   // navbar button
   $("#home header #navbar #button").click(function (){

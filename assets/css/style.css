@@ -19,7 +19,7 @@ a:visited {
 html,
 body {
 	height: 100%;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	font-size: 14px; 
 }
 
@@ -50,14 +50,17 @@ body {
 	height: .07em;
 	background: #2f2f2f;
 }
+.under-line.light-line:after {
+	background: #999;
+}
 
 .section-head {
 	text-align: center;
 	padding: 0 20px;
 }
 .section-head .title {
+	font-family: 'Rubik Mono One', sans-serif;
 	font-size: 1.5em;
-	font-weight: bold;
 	margin-bottom: 2em;
 	letter-spacing: 0.1em;
 }
@@ -73,7 +76,7 @@ body {
 }
 
 .section-head .description {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Noto Serif', serif;
 	font-style: italic;
 	font-size: 1.2em;
 	max-width: 40em; 
@@ -178,7 +181,7 @@ body {
 	-webkit-transition: color .3s; /* Safari 和 Chrome */
 	-ms-transition: color .3s; /* Opera */
 	-o-transition: color .3s; /* Opera */
-	letter-spacing: 0.1em;
+	letter-spacing: 0.05em;
 }
 #home header #navbar a~a {
 	padding-left: 1em;
@@ -271,11 +274,11 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 400px;
-	height: 250px;
-	margin: -150px -200px;
+	width: 500px;
+	height: 300px;
+	margin: -150px -250px;
 	text-align: center;
-	background-color: rgba(255,255,255,.3);
+	background-color: rgba(255,255,255,0);
 	color: #fff;
 }
 #home #center-panel #title:before {
@@ -285,7 +288,7 @@ body {
 	width: 410px;
 	height: 90px;
 	background: transparent;
-	border: 10px solid rgba(255,255,255,.2);
+	border: 10px solid rgba(255,255,255,0);
 	border-bottom: 0;
 	margin: -15px;
 	z-index: -1;
@@ -299,7 +302,7 @@ body {
 	height: 80px;
 	bottom: 0;
 	background: transparent;
-	border: 10px solid rgba(255,255,255,.2);
+	border: 10px solid rgba(255,255,255,0);
 	border-top: 0;
 	margin: -15px;
 	z-index: -1;
@@ -309,17 +312,18 @@ body {
 #home #center-panel #title {
 	font-family: 'Anton', sans-serif;
 	font-size: 3em;
-	height: 90px;
-	line-height: 90px;
+	height: 100px;
+	line-height: 100px;
 }
 #home #center-panel #slide-text {
+	font-family: 'Rubik Mono One', sans-serif;
 	font-size: 2.5em;
-	height: 80px;
-	line-height: 80px;
+	height: 100px;
+	line-height: 100px;
 }
 #home #center-panel #sns-buttons {
-	height: 80px;
-	line-height: 80px;
+	height: 100px;
+	line-height: 100px;
 }
 #home #center-panel #sns-buttons a {
 	font-size: 1.5em;
