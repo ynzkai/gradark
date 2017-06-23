@@ -65,13 +65,13 @@ $(document).ready(function () {
 
 
   // scroll
-  $("#links .home").click(function() { $(document).scrollTo("#home", 1000); });
-  $("#links .about").click(function() { $(document).scrollTo("#about", 1000); });
-  $("#home #down-button").click(function() { $(document).scrollTo("#about", 1000); });
-  $("#links .services").click(function() { $(document).scrollTo("#services", 1000); });
-  $("#links .portfolio").click(function() { $(document).scrollTo("#portfolio", 1000); });
-  $("#links .blog").click(function() { $(document).scrollTo("#blog", 1000); });
-  $("#links .contact").click(function() { $(document).scrollTo("#contact", 1000); });
+  $("#links .home").click(function() { $(document).scrollTo("#home", 1000, {easing: 'swing'}); });
+  $("#links .about").click(function() { $(document).scrollTo("#about", 1000, {easing: 'swing'}); });
+  $("#home #down-button").click(function() { $(document).scrollTo("#about", 1000, {easing: 'swing'}); });
+  $("#links .services").click(function() { $(document).scrollTo("#services", 1000, {easing: 'swing'}); });
+  $("#links .portfolio").click(function() { $(document).scrollTo("#portfolio", 1000, {easing: 'swing'}); });
+  $("#links .blog").click(function() { $(document).scrollTo("#blog", 1000, {easing: 'swing'}); });
+  $("#links .contact").click(function() { $(document).scrollTo("#contact", 1000, {easing: 'swing'}); });
 
   // waypoints navbar
   var waypoints = $("#home").waypoint({

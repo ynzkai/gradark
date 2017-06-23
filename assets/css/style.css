@@ -803,7 +803,7 @@ body {
 
 /* contact style */
 #contact {
-	width: 50%;
+	width: 70%;
 	margin: 0 auto;
 }
 #contact #contact-form .text {
@@ -831,7 +831,7 @@ body {
 	-o-transition: all .5s;
 }
 #contact form textarea {
-	height: 10em;
+	height: 12em;
 }
 #contact form input::-webkit-input-placeholder,
 #contact form textarea::-webkit-input-placeholder {
