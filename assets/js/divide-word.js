@@ -25,7 +25,7 @@
 	$line = $lines[0];
 	var speed = options.speed;
     for(var j=0; j<$line.length; j++) {
-      $line[j].animate({"left": "0px", "opacity": 1}, speed+=30);
+      $line[j].animate({"left": "0px", "opacity": 1}, speed+=50);
     }
   }
 
